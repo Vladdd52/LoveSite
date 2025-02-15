@@ -7,6 +7,10 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
         
+        * {
+            font-family: 'Dancing Script', cursive, Arial, sans-serif;
+            font-display: swap;
+        }
         body {
             display: flex;
             flex-direction: column;
@@ -14,51 +18,53 @@
             align-items: center;
             height: 100vh;
             background-color: #ffcccb;
-            font-family: 'Dancing Script', cursive;
             text-align: center;
             overflow: hidden;
+            margin: 0;
+            padding: 0;
         }
         .container {
             position: relative;
-            top: -100px;
+            top: -5vh;
             z-index: 1;
+            padding: 10px;
         }
-        .image-kupi-container{
+        .image-kupi-container {
             position: relative;
-            top: -130px;
-            display: flex; 
-            align-items: center; 
-            gap: 1100px;
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            max-width: 600px;
             z-index: 1;
         }
         .image-container {
             position: relative;
-            top: -80px;
             display: flex;
             justify-content: center;
-            margin-top: -230px;
-            margin-bottom: 0px;
-            gap: 50px;
+            flex-wrap: wrap;
+            gap: 20px;
+            width: 90%;
+            max-width: 800px;
             z-index: 1;
         }
-        .image-container img {
-            max-width: 12%;
+        .image-container img, .image-kupi-container img {
+            max-width: 30%;
             height: auto;
-            border-radius: 30px;
+            border-radius: 15px;
         }
         h1 {
             color: #d63384;
-            font-size: 3rem;
+            font-size: 2.5rem;
         }
         h2 {
             color: #d63384;
-            font-size: 2.5rem;
-            margin-top: -18px;
+            font-size: 2rem;
+            margin-top: -10px;
         }
         h3 {
             color: #8d0c4d;
-            font-size: 1.5rem;
-            margin-top: 75px;
+            font-size: 1.2rem;
+            margin-top: 50px;
         }
         .heart {
             position: fixed;
@@ -96,22 +102,31 @@
         }
         .footer {
             position: absolute;
-            bottom: 20px;
-            font-size: 1.2rem;
+            bottom: 10px;
+            font-size: 1rem;
             color: #a52a2a;
             z-index: 1;
         }
-        .love-message {
-            font-size: 1.5rem;
-            color: #d63384;
-            margin-top: 20px;
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+            h3 {
+                font-size: 1rem;
+            }
+            .image-container img, .image-kupi-container img {
+                max-width: 45%;
+            }
         }
     </style>
 </head>
 <body>
     <div class="image-kupi-container">
-        <img src="kupidon_l.png" alt="Image 1" class="my-image">
-        <img src="kupidon_r.png" alt="Image 2" class="my-image">
+        <img src="kupidon_l.png" alt="Image 1">
+        <img src="kupidon_r.png" alt="Image 2">
     </div>
     <div class="image-container">
         <img src="love.jpg" alt="Любовное изображение">
@@ -123,7 +138,6 @@
         <h2>Я тебя очень очень сильно люблю😏💌</h2>
         <h3>Этот минисайтик сделан для тебя💕</h3>
     </div>
-
     <div class="footer">2025 год | Сайт сделан для моей любимой девушки Амины</div>
     <script>
         function createHeart() {
